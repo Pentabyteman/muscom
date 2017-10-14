@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>709</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -165,7 +165,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size: 28px;  color: black;</string>
+     <string notr="true">font-size: 28px;</string>
     </property>
     <property name="text">
      <string>MUSCOM</string>
@@ -177,7 +177,7 @@
       <x>40</x>
       <y>380</y>
       <width>721</width>
-      <height>251</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="focusPolicy">
@@ -187,7 +187,20 @@
      <string>text-align: left; padding: 2px; font-size:12px;</string>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="2">
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
       <widget class="QPushButton" name="pushButton_17">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -200,98 +213,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_8">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="pushButton_14">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QPushButton" name="pushButton_18">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QPushButton" name="pushButton_6">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="3">
-      <widget class="QPushButton" name="pushButton_21">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="QPushButton" name="pushButton_19">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_12">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
+     <item row="2" column="1">
       <widget class="QPushButton" name="pushButton_15">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -304,7 +226,20 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="3">
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton_21">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
       <widget class="QPushButton" name="pushButton_20">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -317,8 +252,99 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
+     <item row="1" column="3">
+      <widget class="QPushButton" name="pushButton_22">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_19">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
       <widget class="QPushButton" name="pushButton_23">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="pushButton_24">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="pushButton_25">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left; padding: 2px; font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pushButton_6">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
@@ -343,7 +369,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
+     <item row="0" column="1">
       <widget class="QPushButton" name="pushButton_11">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -382,8 +408,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="2">
-      <widget class="QPushButton" name="pushButton_16">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_8">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
@@ -395,8 +421,8 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="2">
-      <widget class="QPushButton" name="pushButton_22">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_14">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
@@ -408,8 +434,8 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="3">
-      <widget class="QPushButton" name="pushButton_13">
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_18">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
@@ -455,6 +481,33 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>horizontalSlider</zorder>
+   <zorder>label</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -468,9 +521,7 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="muscom.qrc"/>
- </resources>
+ <resources/>
  <connections/>
  <buttongroups>
   <buttongroup name="buttonGroup"/>
