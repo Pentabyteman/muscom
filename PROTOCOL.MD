@@ -8,4 +8,7 @@ Music
 #int between 1 and 100
 
 ## server-user
-{ "title" : [#title<String>], "votes" : [#votes<Int>] }
+Receive Data
+{ "action" : "receive_updates", "data": "["title": <String>, "votes" : #votes<Int>, "songid": #songid"},{}]" } 
+Receive Currently Playing
+{ "action" : "currently_playing", "data": "title" }
