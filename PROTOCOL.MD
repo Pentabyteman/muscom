@@ -19,3 +19,7 @@ Receive Data
 Receive Currently Playing
   
 { "action" : "currently_playing", "data": "title" }
+
+Receive Current Volume
+
+{ "action" : "current_volume", "data": "volume" }
