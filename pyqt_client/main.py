@@ -28,6 +28,7 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
                             self.pushButton_13, self.pushButton_14, self.pushButton_15, self.pushButton_16,
                             self.pushButton_17, self.pushButton_18, self.pushButton_19, self.pushButton_20,
                             self.pushButton_21, self.pushButton_22, self.pushButton_23]
+        self.horizontalSlider.valueChanged[int].connect(lambda: self.new_volume())
 
     def on_receive(self, query):
         print("receiving", query)
@@ -70,6 +71,13 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
         self.lastvote=text
         print(text)
         self.send(text)
+
+    def new_volume(self, valueOfSlider):
+        text = '{"action":"change_volume", "value":"' + valueOfSlider + '"}\n'
+        print(text)
+        self.send(text)
+        
+
 
 
 
