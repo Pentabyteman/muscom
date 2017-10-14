@@ -27,8 +27,7 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
                             self.pushButton_9, self.pushButton_10, self.pushButton_11, self.pushButton_12,
                             self.pushButton_13, self.pushButton_14, self.pushButton_15, self.pushButton_16,
                             self.pushButton_17, self.pushButton_18, self.pushButton_19, self.pushButton_20,
-                            self.pushButton_21, self.pushButton_22, self.pushButton_23,
-                            self.pushButton_24, self.pushButton_25]
+                            self.pushButton_21, self.pushButton_22, self.pushButton_23]
 
     def on_receive(self, query):
         print("receiving", query)
