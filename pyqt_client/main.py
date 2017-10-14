@@ -19,6 +19,7 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
         super(VotingClient, self).__init__(*args, **kwargs)
         self.data_received.connect(self.on_receive)
         uic.loadUi('muscom.ui', self)
+        self.lastvote = ""
         self.show()
         self.connect("10.42.24.206", 54345)
         self.buttonArray = [self.pushButton, self.pushButton_2, self.pushButton_3, self.pushButton_4,
@@ -46,6 +47,12 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
             self.wire_up_button(datapackage, button)
 
     def wire_up_button(self, datapackage, button):
+        try:
+            button.clicked.disconnect()
+        except:
+            Exception
+
+        print("wireup")
         title, songid = datapackage["title"], datapackage["songid"]
         button.setText(title + " (" + str(datapackage["votes"]) + ")")
         button.clicked.connect(lambda: self.upvote(songid))
@@ -53,6 +60,8 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
 
     def upvote(self, sid):
         text = '{"action":"upvote", "value":"' + sid + '"}\n'
+        #if text!=self.lastvote:
+        self.lastvote=text
         print(text)
         self.send(text)
 
