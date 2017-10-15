@@ -1,0 +1,1 @@
+Willkommen bei muscom\nMit "@shackspace vote [Zahl zwischen 1 und 4]" kannst du einmal pro Voting-Phase ein Lied upvoten.\nMit "@shackspace volume [Zahl zwischen 1 und 100]" kannst du die Lautstaerke festelgene.\nViel Vergnuegen.
