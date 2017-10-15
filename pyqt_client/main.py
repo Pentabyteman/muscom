@@ -28,29 +28,34 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
                             self.pushButton_13, self.pushButton_14, self.pushButton_15, self.pushButton_16,
                             self.pushButton_17, self.pushButton_18, self.pushButton_19, self.pushButton_20,
                             self.pushButton_21, self.pushButton_22, self.pushButton_23]
-        self.horizontalSlider.valueChanged[int].connect(lambda: self.new_volume())
+        self.horizontalSlider.sliderReleased.connect(lambda: self.new_volume(self.horizontalSlider.value()))
 
     def on_receive(self, query):
         print("receiving", query)
-        datapackages = json.loads(query)
-        if datapackages["action"] == "receive_updates":
-            for button, datapackage in zip(self.buttonArray, datapackages["data"]):
-                if datapackages[0]["votes"] <= 0:
-                    x = 0
-                else:
-                    x = datapackage["votes"]/datapackages["data"][0]["votes"]
-                r = (1-x)*255
-                g = x*255
-                rgb = str(r)+","+str(g)+",0"
-                print(rgb)
-                button.setStyleSheet("QPushButton { text-align: left; padding: 10px; background-color: rgb("+rgb+");}")
-                self.wire_up_button(datapackage, button)
+        try:
+            datapackages = json.loads(query)
+            if datapackages["action"] == "receive_updates":
+                for button, datapackage in zip(self.buttonArray, datapackages["data"]):
+                    if datapackages[0]["votes"] <= 0:
+                        x = 0
+                    else:
+                        x = datapackage["votes"] / datapackages["data"][0]["votes"]
+                    r = (1 - x) * 255
+                    g = x * 255
+                    rgb = str(r) + "," + str(g) + ",0"
+                    print(rgb)
+                    button.setStyleSheet(
+                        "QPushButton { text-align: left; padding: 10px; background-color: rgb(" + rgb + ");}")
+                    self.wire_up_button(datapackage, button)
 
-        elif datapackages["action"] == "currently_playing":
-            self.label_2.setText(datapackages["data"])
+            elif datapackages["action"] == "currently_playing":
+                self.label_2.setText("Now Playing: " + str(datapackages["data"]))
 
-        elif datapackages["action"] == "current_volume":
-            self.label_3.setText(datapackages["data"])
+            elif datapackages["action"] == "current_volume":
+                self.label_3.setText("Current Volume: " + str(datapackages["data"]))
+        except:
+            pass
+
 
 
     def wire_up_button(self, datapackage, button):
@@ -73,10 +78,10 @@ class VotingClient(QMainWindow, socket_client.SocketClient):
         self.send(text)
 
     def new_volume(self, valueOfSlider):
-        text = '{"action":"change_volume", "value":"' + valueOfSlider + '"}\n'
+        text = '{"action":"volume_adjust", "value":"' + str(valueOfSlider) + '"}\n'
         print(text)
         self.send(text)
-        
+
 
 
 
