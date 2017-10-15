@@ -45,8 +45,7 @@ class SocketClient(QObject):
 
     def send(self, data):
         try:
-            msg = struct.pack('>I', len(data)) + data.encode()
-            self.socket.sendall(msg)
+            self.socket.sendall(data.encode("utf-8"))
         except Exception as e:
             print("ERROR: Error while sending", e)
 
